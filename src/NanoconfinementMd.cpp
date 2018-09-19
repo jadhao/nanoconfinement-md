@@ -161,7 +161,7 @@ int NanoconfinementMd::startSimulation(int argc, char *argv[], bool paraMap) {
 	box.discretize(saltion_diameter_in / unitlength, fraction_diameter);
   if(paraMap)
 {
-  //Induced charge of each mesh point on planar wall is equal to (total Charge density * surface area)/ (total mesh points * e)
+  //Charge of each mesh point on planar wall is equal to (total Charge density * surface area)/ (total mesh points * e)
   //Here we consider the total charge density of planar wall -0.02 C/m2
   meshCharge= (-0.02 * bx * by * pow(10.0,-18)) / (1.60217646 * pow(10.0,-19) * (box.leftplane.size()));
 }
